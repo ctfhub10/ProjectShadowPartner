@@ -40,7 +40,7 @@ The environment is intentionally under-optimized to preserve predictable timing.
 
 The system enforces a strict ceiling of **50 requests per hour** per client identity.
 This limit is globally visible across all sandboxes and shared developer workspaces.
-Exceeding the ceiling triggers an automatic 30-minute lockout.
+Exceeding the ceiling triggers an automatic **60-minute** lockout.
 The lockout is not reversible and bypass attempts are automatically flagged.
 
 The rate limiter uses a monotonic expense counter rather than a rolling window.

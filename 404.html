@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.page.css')  }}">
+</head>
+<body>
+    <!-- Grid Background -->
+    <div class="grid-bg"></div>
+    
+    <!-- Matrix Dots -->
+    <div class="matrix-dots" id="matrixDots"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- status Code -->
+        <div class="error-code">
+            <span class="digit digit-4"> {{ status_code }}</span>
+        </div>
+        
+        <!-- Error Title -->
+        <h1 class="error-title fade-in">
+            {{ title }}
+            <span class="cursor"></span>
+        </h1>
+        
+        <!-- Error Description -->
+        <p class="error-description fade-in">
+            {{ message }}
+        </p>
+        
+        <!-- Status -->
+        <div class="status fade-in">
+            <div class="status-item">
+                <span class="status-value">{{ status_code }}</span>
+                <span class="status-label">Code</span>
+            </div>
+            <div class="status-item">
+                <span class="status-value" id="timeValue">00:00</span>
+                <span class="status-label">Current Time</span>
+            </div>
+            <div class="status-item">
+                <span class="status-value">OK</span>
+                <span class="status-label">System Status</span>
+            </div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="action-buttons fade-in">
+            <a href="/" class="btn"><i class="fas fa-home"></i> Home</a>
+            <a href="/" class="btn"><i class="fas fa-arrow-left"></i> Go Back</a>
+        </div>
+    </div>
+    <!-- Powered by vanna 0.0.33 -->
+    <script src="{{ url_for('static', filename='js/custom.page.script.js') }}"></script>
+</body>
+</html>
